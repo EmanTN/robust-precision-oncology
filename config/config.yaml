@@ -1,0 +1,335 @@
+seed: 42
+# repeat_seeds: [42, 123, 456]
+repeat_seeds: [42]
+
+# ===== Data =====
+data:
+  datasets:
+    ## Pick
+    - name: BRCA
+      path: /home/emantn/scratch/FairnessJune/Training_Data/tcga_brca_data.csv
+    - name: UCEC
+      path: /home/emantn/scratch/FairnessJune/Training_Data/tcga_ucec_data.csv
+    - name: THCA
+      path: /home/emantn/scratch/FairnessJune/Training_Data/tcga_thca_data.csv
+    - name: ValidTrain
+      path: /home/emantn/scratch/FairnessJune/Validation_Data/validation_train_tcga.csv
+    - name: ValidTest
+      path: /home/emantn/scratch/FairnessJune/Validation_Data/validation_data.csv
+
+    ## Pick
+    - name: TPM_Train
+      path: /home/emantn/scratch/FairnessJune/Validation_Data/tpm_train_tcga.csv
+    - name: TPM_Test
+      path: /home/emantn/scratch/FairnessJune/Validation_Data/tpm_data.csv
+    - name: ComBat_Test
+      path: /home/emantn/scratch/FairnessJune/Validation_Data/tpm_combat_data.csv
+
+
+    ## Pick
+    - name: BRCA_ExprPCs
+      path: /home/emantn/scratch/FairnessJune/Training_Data/tcga_brca_data_exprPCs.csv
+    - name: UCEC_ExprPCs
+      path: /home/emantn/scratch/FairnessJune/Training_Data/tcga_ucec_data_exprPCs.csv
+    - name: THCA_ExprPCs
+      path: /home/emantn/scratch/FairnessJune/Training_Data/tcga_thca_data_exprPCs.csv
+   
+    - name: TPM_Train_ExprPCs
+      path: /home/emantn/scratch/FairnessJune/Validation_Data/tpm_train_tcga_exprPCs.csv
+    - name: TPM_Test_ExprPCs
+      path: /home/emantn/scratch/FairnessJune/Validation_Data/tpm_data_exprPCs.csv
+    - name: ComBat_Test_ExprPCs
+      path: /home/emantn/scratch/FairnessJune/Validation_Data/tpm_combat_data_exprPCs.csv
+
+    - name: ValidTrain_ExprPCs
+      path: /home/emantn/scratch/FairnessJune/Validation_Data/validation_train_tcga_exprPCs.csv
+    - name: ValidTest_ExprPCs
+      path: /home/emantn/scratch/FairnessJune/Validation_Data/validation_data_exprPCs.csv
+
+    ## Pick
+    - name: BRCA_GenoPCs
+      path: /home/emantn/scratch/FairnessJune/Training_Data/tcga_brca_data_genoPCs.csv
+    - name: UCEC_GenoPCs
+      path: /home/emantn/scratch/FairnessJune/Training_Data/tcga_ucec_data_genoPCs.csv
+    - name: THCA_GenoPCs
+      path: /home/emantn/scratch/FairnessJune/Training_Data/tcga_thca_data_genoPCs.csv
+    # ══════════════════════════════════════════════════════
+    # EMBEDDINGS
+    # ══════════════════════════════════════════════════════
+    # ── PCA ──
+    - name: BRCA_PCA
+      path: /home/emantn/scratch/FairnessJune/Embeddings/BRCA_pca.csv
+    - name: THCA_PCA
+      path: /home/emantn/scratch/FairnessJune/Embeddings/THCA_pca.csv
+    - name: UCEC_PCA
+      path: /home/emantn/scratch/FairnessJune/Embeddings/UCEC_pca.csv
+    - name: TPM_Train_PCA
+      path: /home/emantn/scratch/FairnessJune/Embeddings/TPM_Train_pca.csv
+    - name: TPM_Test_PCA
+      path: /home/emantn/scratch/FairnessJune/Embeddings/TPM_Test_pca.csv
+    - name: ComBat_Test_PCA
+      path: /home/emantn/scratch/FairnessJune/Embeddings/ComBat_Test_pca.csv
+
+    # ── PROGENy ──
+    - name: BRCA_PROGENY
+      path: /home/emantn/scratch/FairnessJune/Embeddings/BRCA_progeny.csv
+    - name: THCA_PROGENY
+      path: /home/emantn/scratch/FairnessJune/Embeddings/THCA_progeny.csv
+    - name: UCEC_PROGENY
+      path: /home/emantn/scratch/FairnessJune/Embeddings/UCEC_progeny.csv
+    - name: TPM_Train_PROGENY
+      path: /home/emantn/scratch/FairnessJune/Embeddings/TPM_Train_progeny.csv
+    - name: TPM_Test_PROGENY
+      path: /home/emantn/scratch/FairnessJune/Embeddings/TPM_Test_progeny.csv
+    - name: ComBat_Test_PROGENY
+      path: /home/emantn/scratch/FairnessJune/Embeddings/ComBat_Test_progeny.csv
+    - name: ValidTrain_PROGENY
+      path: /home/emantn/scratch/FairnessJune/Embeddings/ValidTrain_progeny.csv
+    - name: ValidTest_PROGENY
+      path: /home/emantn/scratch/FairnessJune/Embeddings/ValidTest_progeny.csv
+
+    # ── ssGSEA ──
+    - name: BRCA_SSGSEA
+      path: /home/emantn/scratch/FairnessJune/Embeddings/BRCA_ssgsea.csv
+    - name: THCA_SSGSEA
+      path: /home/emantn/scratch/FairnessJune/Embeddings/THCA_ssgsea.csv
+    - name: UCEC_SSGSEA
+      path: /home/emantn/scratch/FairnessJune/Embeddings/UCEC_ssgsea.csv
+    - name: TPM_Train_SSGSEA
+      path: /home/emantn/scratch/FairnessJune/Embeddings/TPM_Train_ssgsea.csv
+    - name: TPM_Test_SSGSEA
+      path: /home/emantn/scratch/FairnessJune/Embeddings/TPM_Test_ssgsea.csv
+    - name: ComBat_Test_SSGSEA
+      path: /home/emantn/scratch/FairnessJune/Embeddings/ComBat_Test_ssgsea.csv
+    - name: ValidTrain_SSGSEA
+      path: /home/emantn/scratch/FairnessJune/Embeddings/ValidTrain_ssgsea.csv
+    - name: ValidTest_SSGSEA
+      path: /home/emantn/scratch/FairnessJune/Embeddings/ValidTest_ssgsea.csv
+
+    # ── VAE ──
+    - name: BRCA_VAE
+      path: /home/emantn/scratch/FairnessJune/Embeddings/BRCA_vae.csv
+    - name: THCA_VAE
+      path: /home/emantn/scratch/FairnessJune/Embeddings/THCA_vae.csv
+    - name: UCEC_VAE
+      path: /home/emantn/scratch/FairnessJune/Embeddings/UCEC_vae.csv
+    - name: TPM_Train_VAE
+      path: /home/emantn/scratch/FairnessJune/Embeddings/TPM_Train_vae.csv
+    - name: TPM_Test_VAE
+      path: /home/emantn/scratch/FairnessJune/Embeddings/TPM_Test_vae.csv
+    - name: ComBat_Test_VAE
+      path: /home/emantn/scratch/FairnessJune/Embeddings/ComBat_Test_vae.csv
+
+    # ── BulkFormer ──
+    - name: BRCA_BF
+      path: /home/emantn/scratch/FairnessJune/Embeddings/BRCA_bulkformer.csv
+    - name: THCA_BF
+      path: /home/emantn/scratch/FairnessJune/Embeddings/THCA_bulkformer.csv
+    - name: UCEC_BF
+      path: /home/emantn/scratch/FairnessJune/Embeddings/UCEC_bulkformer.csv
+    - name: TPM_Train_BF
+      path: /home/emantn/scratch/FairnessJune/Embeddings/TPM_Train_bulkformer.csv
+    - name: TPM_Test_BF
+      path: /home/emantn/scratch/FairnessJune/Embeddings/TPM_Test_bulkformer.csv
+    - name: ComBat_Test_BF
+      path: /home/emantn/scratch/FairnessJune/Embeddings/ComBat_Test_bulkformer.csv
+
+  label_col: subtype
+  batch_col: dataset_id
+  group_col: group
+  meta_cols: [patient, group, dataset_id, subtype, Study]
+  # group columns for fairness reporting (you can change/extend later)
+  fairness_groups: [dataset_id, group]
+
+# ===== Preprocessing =====
+preprocessing:
+  standardize_for: [LR_L2, LR_L1, LR, LinearSVM, RBFSVM, MLP]  # runner builds a Pipeline
+  skip_standardize_for: [RF, XGB]
+  disable_scaler: true
+
+# ===== Training strategies =====
+training_methods:
+  - name: phylo_style
+    # Outer split fixed by dataset_id: train on ONE dataset_id, test on ALL remaining
+    outer_unit: dataset_id
+    # Inner CV used only inside the training unit (small batch)
+    inner_cv:
+      type: StratifiedKFold
+      n_splits: 3
+      shuffle: true
+      random_state: 42
+      metric: auroc
+      stratify_label: subtype
+
+  - name: LOGO
+    # Leave-one-group-out over 'group' (or dataset_id if that's your “site”)
+    logo_unit: group
+    inner_cv:
+      type: StratifiedKFold
+      n_splits: 5
+      shuffle: true
+      random_state: 42
+      metric: auroc
+      stratify_label: subtype
+
+  - name: real_dist
+    # Take same percentage from each group (e.g., 30%) into train, rest test
+    sample:
+      scheme: percentage_per_group
+      pct: 0.30
+      group_col: group
+    inner_cv:
+      type: StratifiedKFold
+      n_splits: 5
+      shuffle: true
+      random_state: 42
+      metric: auroc
+      stratify_label: subtype
+
+  - name: equal_dist
+    sample:
+      scheme: equal_dist_dynamic
+      # fraction of the *smallest group* to use for all groups
+      train_frac_of_smallest: 0.30
+      group_col: group
+    inner_cv:
+      type: StratifiedKFold
+      n_splits: 5
+      shuffle: true
+      random_state: 42
+      metric: auroc
+      stratify_label: subtype
+
+# ===== Models & hyperparameter grids =====
+models:
+  - name: LR_L2
+    family: sklearn
+    class_path: sklearn.linear_model.LogisticRegression
+    grid:
+      C: [1e-4, 1e-3, 1e-2, 0.1, 1, 10, 100]
+      solver: [lbfgs]
+      penalty: [l2]
+      max_iter: [2000]
+      random_state: [42]
+      class_weight: [null, balanced]
+
+  - name: LR_L1
+    family: sklearn
+    class_path: sklearn.linear_model.LogisticRegression
+    grid:
+      C: [1e-4, 1e-3, 1e-2, 0.1, 1, 10, 100]
+      solver: [liblinear]
+      penalty: [l1]
+      max_iter: [2000]
+      random_state: [42]
+      class_weight: [null, balanced]
+
+  - name: LR
+    family: sklearn
+    class_path: sklearn.linear_model.LogisticRegression
+    grid:
+      solver: [lbfgs]
+      penalty: [none]    # will map to None in code
+      max_iter: [2000]
+      class_weight: [null, balanced]
+      random_state: [42]
+
+  - name: LinearSVM
+    family: sklearn
+    class_path: sklearn.calibration.CalibratedClassifierCV
+    #class_path: sklearn.svm.LinearSVC
+    wrapper:
+      base_class_path: sklearn.svm.LinearSVC
+      method: sigmoid
+      cv: 3
+    grid:
+      estimator__C: [0.01, 0.1, 1, 10]
+      estimator__loss: [hinge, squared_hinge]
+      estimator__max_iter: [5000]
+      estimator__random_state: [42]
+      estimator__class_weight: [null, balanced]  
+
+  - name: RBFSVM
+    family: sklearn
+    class_path: sklearn.svm.SVC
+    grid:
+      C: [0.1, 1, 10, 100]
+      gamma: [scale, 0.1, 0.01, 0.001]
+      probability: [true]
+      class_weight: [null, balanced]
+      random_state: [42]
+
+  - name: RF
+    family: sklearn
+    class_path: sklearn.ensemble.RandomForestClassifier
+    grid:
+      n_estimators: [100, 200, 300, 500]
+      max_depth: [5, 10, 20, null]
+      min_samples_split: [2, 5, 10]
+      random_state: [42]
+      n_jobs: [-1]
+      class_weight: [null, balanced, balanced_subsample]
+      max_features: [sqrt, log2]
+
+  - name: XGB
+    family: xgb
+    class_path: xgboost.XGBClassifier
+    grid:
+      n_estimators: [100,300, 500]        
+      learning_rate: [0.03, 0.1]     
+      max_depth: [3, 5]             
+      min_child_weight: [1, 3]      
+      subsample: [0.8]            
+      colsample_bytree: [0.6, 0.8]   
+      reg_lambda: [1]                
+      reg_alpha: [0, 0.5] 
+
+      tree_method: [hist]
+      device: [cpu]
+      eval_metric: [logloss]
+      random_state: [42]
+      n_jobs: [-1]
+
+  - name: MLP
+    family: torch
+    class_path: pytorch_mlp  # handled in code
+    grid:
+      hidden_layer_sizes:
+        - [128]
+        - [256]
+        - [256, 128]
+        - [256, 128, 64]
+        # - [512, 256, 128]
+      lr: [0.0005, 0.001, 0.005]
+      epochs: [75, 120]
+      #epochs: [75] #raw
+      class_weight: [null, balanced]
+      dropout: [0.0, 0.3, 0.5]
+      #dropout: [0.0, 0.3] #raw
+      weight_decay: [0, 1e-4, 1e-3]
+      #batch_size: [32, 64]
+      batch_size: [32] #embed
+
+
+# ===== Tuning objectives =====
+tuning:
+  primary_metric: auroc
+  # All methods tune on AUROC uniformly. Validated by experiment: switching
+  # from worst-group to AUROC tuning moves LR results ~0 (mean WGA +0.001);
+  # only one MLP cell shifted. Matches PhyloFrame; avoids a fairness-tuning
+  # advantage PF didn't have. To restore worst-group tuning, list methods here.
+  use_worst_group_for: []
+  worst_group_over: group
+
+# ===== Outputs =====
+output:
+  best_params_dir: results/best_params
+
+  eval_dir: results/evaluations
+
+# ===== Optional: declare custom (fairness) metrics to compute in run.py =====
+custom_metrics:
+  - name: worst_group_auroc
+    over: group
+  - name: worst_group_accuracy
+    over: group
